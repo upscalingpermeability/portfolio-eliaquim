@@ -6,16 +6,21 @@
 }
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
-  background-color: #000000;
+  background-color: #ffffff;
   /* Pure black */
-  color: #f9fafb;
+  color: #111827;
   font-family: var(--font-sans);
   overflow-x: hidden;
   scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.dark body {
+  background-color: #000000;
+  color: #f9fafb;
 }
 
 h1,

@@ -3,15 +3,19 @@ import { useState, useEffect } from "react";
 import { Moon, Sun } from "lucide-react";
 
 const Navbar = () => {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(
+  localStorage.getItem("theme") === "dark"
+);
 
   useEffect(() => {
-    if (isDark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [isDark]);
+  if (isDark) {
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+  }
+}, [isDark]);
 
   return (
     <nav className="fixed w-full z-50 transition-all duration-300 glass border-b border-white/5 top-0">
