@@ -10,7 +10,7 @@ const Blog = () => {
       title: "Building ShashiniOS: My First 16-Bit Operating System from Scratch",
       excerpt:
         "A simple 16-bit operating system built completely from scratch using Assembly language.",
-      image: "/images/article1_image.jpg",
+      image: `${import.meta.env.BASE_URL}images/article1_image.jpg`,
       readTime: "3 min read",
       date: "Jun 25, 2025",
     },
@@ -18,7 +18,7 @@ const Blog = () => {
       title: "DevOps Essentials: A Beginner-Friendly Guide",
       excerpt:
         "Learn how DevOps helps companies release updates quickly and efficiently.",
-      image: "/images/article2_image.jpg",
+      image: `${import.meta.env.BASE_URL}images/article2_image.jpg`,
       readTime: "4 min read",
       date: "May 3, 2025",
     },
@@ -26,7 +26,7 @@ const Blog = () => {
       title: "Understanding Software Licensing",
       excerpt:
         "Understand software licenses and how they control modification and distribution.",
-      image: "/images/article3_image.jpg",
+      image: `${import.meta.env.BASE_URL}images/article3_image.jpg`,
       readTime: "4 min read",
       date: "Apr 30, 2025",
     },
@@ -34,7 +34,7 @@ const Blog = () => {
       title: "MySQL Stored Procedures Guide",
       excerpt:
         "Learn how stored procedures help organize SQL queries efficiently.",
-      image: "/images/article4_image.jpg",
+      image: `${import.meta.env.BASE_URL}images/article4_image.jpg`,
       readTime: "5 min read",
       date: "Jan 27, 2025",
     },
@@ -42,7 +42,7 @@ const Blog = () => {
       title: "CIA Triad in Cyber Security",
       excerpt:
         "Confidentiality, Integrity, and Availability explained simply.",
-      image: "/images/article5_image.jpg",
+      image: `${import.meta.env.BASE_URL}images/article5_image.jpg`,
       readTime: "9 min read",
       date: "Jul 17, 2024",
     },
@@ -123,6 +123,8 @@ const Blog = () => {
                   alt={article.title}
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 brightness-90"
                   onError={(e) => {
+                    console.log("Image failed:", article.image);
+
                     e.target.src =
                       "https://placehold.co/600x400/111827/ffffff?text=Blog+Image";
                   }}
