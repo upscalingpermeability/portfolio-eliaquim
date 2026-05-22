@@ -2,14 +2,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ChevronRight, Clock, ChevronLeft } from "lucide-react";
 
-//import article1Img from "../assets/article1_image.jpg";
-import article2Img from "../assets/article2_image.jpg";
-import article3Img from "../assets/article3_image.jpg";
-import article4Img from "../assets/article4_image.jpg";
-import article5Img from "../assets/article5_image.jpg";
-import article1Img from "/src/assets/article1_image.jpg";
-
-console.log(article1Img);
 const Blog = () => {
   const [startIndex, setStartIndex] = useState(0);
 
@@ -18,7 +10,7 @@ const Blog = () => {
       title: "Building ShashiniOS: My First 16-Bit Operating System from Scratch",
       excerpt:
         "A simple 16-bit operating system built completely from scratch using Assembly language.",
-      image: article1Img,
+      image: "/images/article1_image.jpg",
       readTime: "3 min read",
       date: "Jun 25, 2025",
     },
@@ -26,7 +18,7 @@ const Blog = () => {
       title: "DevOps Essentials: A Beginner-Friendly Guide",
       excerpt:
         "Learn how DevOps helps companies release updates quickly and efficiently.",
-      image: article2Img,
+      image: "/images/article2_image.jpg",
       readTime: "4 min read",
       date: "May 3, 2025",
     },
@@ -34,7 +26,7 @@ const Blog = () => {
       title: "Understanding Software Licensing",
       excerpt:
         "Understand software licenses and how they control modification and distribution.",
-      image: article3Img,
+      image: "/images/article3_image.jpg",
       readTime: "4 min read",
       date: "Apr 30, 2025",
     },
@@ -42,7 +34,7 @@ const Blog = () => {
       title: "MySQL Stored Procedures Guide",
       excerpt:
         "Learn how stored procedures help organize SQL queries efficiently.",
-      image: article4Img,
+      image: "/images/article4_image.jpg",
       readTime: "5 min read",
       date: "Jan 27, 2025",
     },
@@ -50,7 +42,7 @@ const Blog = () => {
       title: "CIA Triad in Cyber Security",
       excerpt:
         "Confidentiality, Integrity, and Availability explained simply.",
-      image: article5Img,
+      image: "/images/article5_image.jpg",
       readTime: "9 min read",
       date: "Jul 17, 2024",
     },
@@ -88,7 +80,7 @@ const Blog = () => {
     >
       {/* Header */}
       <div className="flex justify-between items-center">
-        <h2 className="text-3xl font-bold flex items-center gap-3">
+        <h2 className="text-3xl font-bold flex items-center gap-3 text-white">
           <span className="w-8 h-1 bg-neutral-300 rounded-full"></span>
           Latest Articles
         </h2>
@@ -134,8 +126,7 @@ const Blog = () => {
                     e.target.src =
                       "https://placehold.co/600x400/111827/ffffff?text=Blog+Image";
                   }}
-                /> 
-                
+                />
 
                 {/* Read Time */}
                 <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-white flex items-center gap-1">
