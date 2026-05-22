@@ -1,11 +1,9 @@
 @import "tailwindcss";
 
-@theme {
+:root {
   --font-sans: Arial, Helvetica, sans-serif;
   --font-heading: "Times New Roman", Times, serif;
-}
 
-:root {
   color-scheme: light;
 }
 
