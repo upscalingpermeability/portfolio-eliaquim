@@ -2,12 +2,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ChevronRight, Clock, ChevronLeft } from "lucide-react";
 
-import article1Img from "../assets/article1_image.jpg";
+//import article1Img from "../assets/article1_image.jpg";
 import article2Img from "../assets/article2_image.jpg";
 import article3Img from "../assets/article3_image.jpg";
 import article4Img from "../assets/article4_image.jpg";
 import article5Img from "../assets/article5_image.jpg";
+import article1Img from "/src/assets/article1_image.jpg";
 
+console.log(article1Img);
 const Blog = () => {
   const [startIndex, setStartIndex] = useState(0);
 
@@ -132,7 +134,8 @@ const Blog = () => {
                     e.target.src =
                       "https://placehold.co/600x400/111827/ffffff?text=Blog+Image";
                   }}
-                />
+                /> 
+                
 
                 {/* Read Time */}
                 <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-white flex items-center gap-1">
