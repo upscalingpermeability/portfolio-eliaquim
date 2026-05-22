@@ -2,10 +2,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ChevronRight, Clock, ChevronLeft } from "lucide-react";
 import article1Img from "../assets/article1_image.jpg";
-import article2Img from "../assets/article2.image.jpg";
-import article3Img from "../assets/article3.image.jpg";
-import article4Img from "../assets/article4.image.jpg";
-import article5Img from "../assets/article5.image.jpg";
+import article2Img from "../assets/article2_image.jpg";
+import article3Img from "../assets/article3_image.jpg";
+import article4Img from "../assets/article4_image.jpg";
+import article5Img from "../assets/article5_image.jpg";
 
 const Blog = () => {
   const [startIndex, setStartIndex] = useState(0);
