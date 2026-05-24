@@ -15,20 +15,29 @@ const Projects = () => {
       title: "Sports Equipments E-Commerce Platform",
       description:
         "A responsive e-commerce site featuring user authentication, profile management, and interactive product showcases.",
-      image: "/images/project2_image.jpg",
+
+      image: "/portfolio/images/project2_image.jpg",
+
       tags: ["HTML/CSS/JS", "PHP", "Git"],
+
       github:
         "https://github.com/shashini22027/sports_eqiupments_stock",
+
       demo: "#",
     },
+
     {
       title: "Bookfair Stall Reservation System",
       description:
         "A comprehensive reservation system featuring vendor registration, stall selection, and payment processing for large-scale bookfair events.",
-      image: "/images/project1_image.jpg",
+
+      image: "/portfolio/images/project1_image.jpg",
+
       tags: ["React", "Node.js", "MongoDB", "Express"],
+
       github:
         "https://github.com/shashini22027/bookfair-stall-reservation-system",
+
       demo: "#",
     },
   ];
@@ -57,6 +66,7 @@ const Projects = () => {
       <div className="text-center space-y-3">
         <h2 className="text-4xl font-bold">
           <span className="text-neutral-400">Featured </span>
+
           <span className="text-white">Projects</span>
         </h2>
 
@@ -122,6 +132,7 @@ const Projects = () => {
                   className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-neutral-400 transition-colors"
                 >
                   <Github className="w-4 h-4" />
+
                   GitHub Repo
                 </a>
 
@@ -132,6 +143,7 @@ const Projects = () => {
                   className="inline-flex items-center gap-2 text-sm font-bold text-neutral-400 hover:text-white transition-colors"
                 >
                   <ExternalLink className="w-4 h-4" />
+
                   Live Demo
                 </a>
               </div>
