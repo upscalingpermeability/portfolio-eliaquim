@@ -20,7 +20,7 @@ const Education = () => {
             <span className="text-black text-sm font-medium bg-white px-3 py-1 rounded-full">2024–Present</span>
           </div>
           <p className="text-neutral-400">University of Kelaniya</p>
-          <p className="text-sm mt-4 text-white font-semibold pt-1">CGPA: 3.2721 / 4.0</p>
+          <p className="text-sm mt-4 text-white font-semibold pt-1">CGPA: 3.64 / 4.0</p>
           <p className="text-sm mt-4 text-neutral-500 border-t border-white/5 pt-3">
             Specializing in Net-Centric web application development, data science and engineering application, health informatic engineering, business intelligence and management support systems
           </p>

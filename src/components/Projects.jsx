@@ -23,6 +23,16 @@ const projects = [
     github: "https://github.com/shashini22027/sports_eqiupments_stock",
     demo: "#",
   },
+  {
+  title: "Beauty E-Commerce Platform",
+  subtitle: "Full Stack E-Commerce Application",
+  description:
+    "A full-stack cosmetics e-commerce platform featuring secure JWT authentication, product browsing, shopping cart management, and order processing functionalities with responsive user interfaces.",
+  image: "/images/project3_image.jpg",
+  tags: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS", "JWT"],
+  github: "https://github.com/shashini22027/beauty-ecommerce-platform",
+  demo: "#",
+},
 ];
 
 const Projects = () => {
