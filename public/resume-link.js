@@ -2,6 +2,30 @@ const resumeUrl =
   'https://drive.google.com/drive/folders/1wASEwnXQj0fajpwqZwXZD4SZyaASKDP0?usp=drive_link'
 
 document.addEventListener('DOMContentLoaded', () => {
+  const resumeUrl = 'https://drive.google.com/drive/folders/1wASEwnXQj0fajpwqZwXZD4SZyaASKDP0?usp=drive_link';
+  const resumeButtons = document.querySelectorAll('a[href*="resume"], button');
+
+  resumeButtons.forEach((button) => {
+    const label = button.textContent.trim().toLowerCase();
+
+    if (!label.includes('download') || (!label.includes('resume') && !label.includes('resumme'))) {
+      return;
+    }
+
+    if (button.tagName === 'A') {
+      button.href = resumeUrl;
+      button.target = '_blank';
+      button.rel = 'noopener noreferrer';
+      return;
+    }
+
+    button.addEventListener('click', () => {
+      window.location.href = resumeUrl;
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
   const resumeButton = Array.from(document.querySelectorAll('a, button')).find(
     (element) => element.textContent.trim().toLowerCase() === 'download resume',
   )
