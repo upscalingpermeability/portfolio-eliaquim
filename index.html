@@ -63,6 +63,252 @@
         object-fit: cover;
       }
     }
+
+    img,
+    video,
+    canvas,
+    svg {
+      max-width: 100%;
+    }
+
+    @media (max-width: 1024px) {
+      body {
+        overflow-x: hidden;
+      }
+
+      section,
+      header,
+      footer,
+      main > div,
+      .container,
+      .wrapper {
+        max-width: 100%;
+      }
+
+      .hero,
+      .about,
+      .projects,
+      .project-card,
+      .project-item,
+      .project,
+      .contact,
+      .skills,
+      .experience {
+        gap: 32px;
+      }
+
+      .project-card,
+      .project-item,
+      .project {
+        grid-template-columns: 1fr !important;
+      }
+
+      .project-card .project-image,
+      .project-card .project-img,
+      .project-card .project-media,
+      .project-item .project-image,
+      .project-item .project-img,
+      .project-item .project-media,
+      .project .project-image,
+      .project .project-img,
+      .project .project-media {
+        height: auto;
+        min-height: 0;
+      }
+
+      .project-card .project-image img,
+      .project-card .project-img img,
+      .project-card .project-media img,
+      .project-item .project-image img,
+      .project-item .project-img img,
+      .project-item .project-media img,
+      .project .project-image img,
+      .project .project-img img,
+      .project .project-media img {
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+    }
+
+    @media (max-width: 768px) {
+      html {
+        font-size: 15px;
+      }
+
+      body {
+        min-width: 320px;
+      }
+
+      nav,
+      header,
+      .navbar,
+      .nav,
+      .site-header {
+        flex-wrap: wrap;
+      }
+
+      nav ul,
+      .nav-links,
+      .navbar ul,
+      header ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+      }
+
+      section,
+      main,
+      footer,
+      .container,
+      .wrapper {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+      h1 {
+        font-size: clamp(2.25rem, 12vw, 4rem) !important;
+        line-height: 1.05;
+      }
+
+      h2 {
+        font-size: clamp(1.8rem, 8vw, 3rem) !important;
+        line-height: 1.12;
+      }
+
+      h3 {
+        font-size: clamp(1.25rem, 6vw, 2rem) !important;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      .hero,
+      .about,
+      .contact,
+      .skills,
+      .experience {
+        grid-template-columns: 1fr !important;
+        text-align: left;
+      }
+
+      .button-group,
+      .buttons,
+      .actions,
+      .cta-group {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .button-group > *,
+      .buttons > *,
+      .actions > *,
+      .cta-group > * {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero,
+      #home,
+      .home {
+        min-height: auto !important;
+        padding-top: 96px !important;
+        padding-bottom: 56px !important;
+      }
+
+      .hero img,
+      #home img,
+      .home img,
+      .profile-image img,
+      .profile-img img,
+      .hero-image img,
+      .hero-img img,
+      .avatar img {
+        width: min(76vw, 320px) !important;
+        height: min(76vw, 320px) !important;
+        max-width: 320px;
+        max-height: 320px;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .profile-image,
+      .profile-img,
+      .hero-image,
+      .hero-img,
+      .avatar {
+        width: fit-content;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .scroll-down,
+      .scroll-indicator,
+      [class*="scroll"] {
+        position: static !important;
+        transform: none !important;
+        margin: 22px auto 0 !important;
+        text-align: center;
+        display: flex;
+        width: fit-content;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      section,
+      main,
+      footer,
+      .container,
+      .wrapper {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
+
+      .project-card,
+      .project-item,
+      .project {
+        gap: 22px;
+      }
+
+      .project-card .project-image img,
+      .project-card .project-img img,
+      .project-card .project-media img,
+      .project-item .project-image img,
+      .project-item .project-img img,
+      .project-item .project-media img,
+      .project .project-image img,
+      .project .project-img img,
+      .project .project-media img {
+        aspect-ratio: 4 / 3;
+      }
+
+      .hero,
+      #home,
+      .home {
+        padding-top: 84px !important;
+      }
+
+      .hero img,
+      #home img,
+      .home img,
+      .profile-image img,
+      .profile-img img,
+      .hero-image img,
+      .hero-img img,
+      .avatar img {
+        width: min(78vw, 280px) !important;
+        height: min(78vw, 280px) !important;
+      }
+    }
   </style>
 </head>
 
