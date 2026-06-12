@@ -757,7 +757,19 @@
     }
   }
 
-  fetch('/api/track').catch(() => {});
+  // Registra a visita apenas após interação humana (filtra bots)
+  (function () {
+    let tracked = false;
+    function humanTrack() {
+      if (tracked) return;
+      tracked = true;
+      fetch('/api/track').catch(() => {});
+      ['scroll', 'mousemove', 'touchstart', 'click', 'keydown']
+        .forEach(ev => window.removeEventListener(ev, humanTrack));
+    }
+    ['scroll', 'mousemove', 'touchstart', 'click', 'keydown']
+      .forEach(ev => window.addEventListener(ev, humanTrack, { passive: true }));
+  })();
   loadVisitors();
   setInterval(loadVisitors, 30000);
 
